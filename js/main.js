@@ -1,4 +1,4 @@
-  
+
 var script_url = "https://script.google.com/macros/s/AKfycbzegZl-ZdwhA52RQ44KNvCXyS8fSv6z8-J_Kd-kLQjEp6BjdI4/exec";
 
 
@@ -7,14 +7,14 @@ $("#submitIOT").click(function(event) {
     var masv =  $.trim($("#masv").val()).replace(/ /g,'');
     var lop = $.trim($("#lop").val()).replace(/ /g,'').toUpperCase();
     var email = $.trim($("#email").val()).replace(/ /g,'');
-    var hovaten = $.trim($("#hovaten").val()).replace(/ /g,'');
+    var hovaten = $("#hovaten").val();
     var url = script_url + "?callback=result&masv=" + masv + "&lop=" + lop + "&email=" + email +  "&hovaten=" + hovaten +"&action=register";
     if (masv == '' || lop == '' )
         return alert("Vui lòng điền thông tin Tên và Mã số sinh viên");
     var result = $(".input-group #email");
     result.text("");
-      
-    if (!validateEmail(email)) 
+
+    if (!validateEmail(email))
     {
         result.css("border-bottom", "1.5px solid red");
         result.val("");
@@ -22,7 +22,7 @@ $("#submitIOT").click(function(event) {
         return;
     }
     document.querySelector('.is-loading').classList.remove('is-hidden');
-    
+
     var request = jQuery.ajax({
       crossDomain: true,
       url: url,
