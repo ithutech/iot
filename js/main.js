@@ -8,7 +8,8 @@ $("#submitIOT").click(function(event) {
     var lop = $.trim($("#lop").val()).replace(/ /g,'').toUpperCase();
     var email = $.trim($("#email").val()).replace(/ /g,'');
     var hovaten = $("#hovaten").val();
-    var url = script_url + "?callback=result&masv=" + masv + "&lop=" + lop + "&email=" + email +  "&hovaten=" + hovaten +"&action=register";
+    var cauhoi = $("#cauhoi").val();
+    var url = script_url + "?callback=result&masv=" + masv + "&lop=" + lop + "&email=" + email +  "&hovaten=" + hovaten + "&cauhoi=" +cauhoi + "&action=register";
     if (masv == '' || lop == '' )
         return alert("Vui lòng điền thông tin Tên và Mã số sinh viên");
     var result = $(".input-group #email");
