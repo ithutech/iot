@@ -2,10 +2,12 @@
 /* ==========================================================================
    #FONT
    ========================================================================== */
-.font-robo {
+*,.font-robo {
   font-family: 'Quicksand', sans-serif;
 }
-
+textarea#cauhoi::after,textarea#cauhoi::before{
+  border: none;
+}
 /* ==========================================================================
    #GRID
    ========================================================================== */
@@ -514,8 +516,8 @@ input {
   }
   75% { transform: translateY(9px) rotate(67.5deg); }
   100% { transform: translateY(0) rotate(90deg); }
-} 
-#shadow { 
+}
+#shadow {
   width: 50px;
   height: 5px;
   background: #000;
@@ -542,7 +544,7 @@ input {
   left:0;
   right:0;
   bottom:0;
-  background: #7091c291; 
+  background: #7091c291;
   overflow: hidden;
 }
 .is-hidden{
@@ -564,7 +566,7 @@ div#text_result {
   text-align: center;
   height: 100%;
   background-color: white;
-  
+
 }
 
 
@@ -584,7 +586,7 @@ div#text_result {
     padding: 60px 50px;
   }
   #text_result {
-    margin-top: -284px; 
+    margin-top: -284px;
    }
 }
 
@@ -592,7 +594,7 @@ div#text_result {
   .p-t-180 {
     padding-top: 100px;
   }
-  
+
   .p-b-100 {
     padding-bottom: 100px;
   }
